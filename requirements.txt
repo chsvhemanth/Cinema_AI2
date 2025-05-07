@@ -1,0 +1,4 @@
+dotenv
+groq
+streamlit
+os
