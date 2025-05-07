@@ -1,12 +1,6 @@
 import streamlit as st
-import os
 from groq import Groq
-
-from dotenv import load_dotenv
-import os
-load_dotenv()
-
-GROQ_API_KEY = os.getenv('API_KEY')
+GROQ_API_KEY = st.secrets["groq"]["API_KEY"]
 client = Groq(api_key=GROQ_API_KEY)
 
 def generate_story(user_input):
